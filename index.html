@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌟 Fun Quiz App 🌈</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <h1>🎓 Quiz Master</h1>
+    <p>Test your skills and have fun! ✨</p>
+
+    <div id="quiz-settings">
+      <div class="input-group">
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" placeholder="Enter your name">
+      </div>
+
+      <div class="input-group">
+        <label for="subject">Select Subject:</label>
+        <select id="subject">
+          <option value="english">English</option>
+          <option value="science">Science</option>
+          <option value="general knowledge">General Knowledge</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="level">Select Level:</label>
+        <select id="level">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <button id="startBtn">Start Quiz 🚀</button>
+    </div>
+  </div>
+
+  <!-- Quiz Section -->
+  <div class="quiz hidden">
+    <div class="quiz-header">
+      <div class="greeting">Hello, <span id="user"></span>! 🎉</div>
+      <div class="timer">
+        Time Left: <span id="time">30</span>s
+        <div id="time-bar"><div id="time-progress"></div></div>
+      </div>
+    </div>
+
+    <div id="question">Question text</div>
+    <div id="options"></div>
+    <button id="nextBtn">Next Question ➡️</button>
+  </div>
+
+  <!-- Result -->
+  <div class="result hidden">
+    <h2>Score for <span id="userResult"></span>: <span id="score"></span></h2>
+    <p id="feedback"></p>
+    <button id="restartBtn">Restart Quiz 🔄</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
