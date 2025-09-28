@@ -1,0 +1,244 @@
+/* ===== Root Variables ===== */
+:root {
+  font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+}
+
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:radial-gradient(#3f72df9c,rgba(213, 129, 213, 0.705)); 
+  color: #4a4545;
+  padding: 28px;
+}
+
+/* ===== Pages & Container ===== */
+.page {
+  display: none;
+  max-width: 920px;
+  width: 100%;
+}
+
+.page.active {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+  padding: 30px;
+}
+
+/* ===== Card Styles ===== */
+.card {
+  background:#ffffff ;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.304);
+}
+
+.center-card {
+  max-width: 500px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin: 8px 0 4px;
+}
+
+.muted {
+  color: #6b6b6b;
+  margin-bottom: 12px;
+}
+
+/* ===== Buttons ===== */
+.btn, .btn-card {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.btn:hover, .btn-card:hover {
+  transform: translateY(-2px);
+}
+
+.btn.primary {
+  background:#6aa9ff 
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #f19a9a
+  border: 1px solid #ccc;
+}
+
+/* ===== Grid & Dashboard ===== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.subjects .btn-card {
+  flex: 1;
+  min-width: 150px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #e27509da;
+  text-align: left;
+}
+
+.btn-card.active {
+  border: 2px solid #64a5ddcc;
+  background:#64a5ddcc;
+}
+
+.btn-card.purple {
+  border: 2px solid #864ae08d;
+  background: #864ae086;
+}
+
+.btn-card.pink {
+  border: 2px solid #ef79b8;
+  background:#ef79b8;
+}
+
+/* ===== Quiz Top Row ===== */
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progress-info {
+  font-weight: 700;
+}
+
+/* ===== Question Card ===== */
+.question-card {
+  background: #edf109a2 rgba(255, 68, 0, 0.742);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+.question-text {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ===== Options ===== */
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.option-btn:hover {
+  background: #eee;
+}
+
+.option-btn.selected {
+  border: 2px solid #888;
+}
+
+.option-btn.correct {
+  border: 2px solid green;
+  background: #5ce85cc0;
+}
+
+.option-btn.wrong {
+  border: 2px solid red;
+  background: #d42a2a97;
+}
+
+.option-btn.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ===== Hint Row ===== */
+.hint-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hint-text {
+  font-style: italic;
+}
+
+/* ===== Timer ===== */
+.timer-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.timebar-bg {
+  flex: 1;
+  height: 10px;
+  background:#e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.timebar {
+  height: 100%;
+  width: 100%;
+  background: #444444;
+}
+
+/* ===== Action Buttons ===== */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.actions .btn {
+  min-width: 120px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 720px) {
+  .subject-btn {
+    min-width: 120px;
+  }
+
+  .quiz-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

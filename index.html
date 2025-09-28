@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Learn and Test🔍💡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Login Page -->
+    <section id="login-page" class="page active">
+      <div class="card center-card">
+        <h1>WELCOME🎓</h1>
+        <p class="muted">Enter your name to start the quiz</p>
+        <input id="username" type="text" placeholder="Your name" />
+        <div class="actions">
+          <button id="start-btn" class="btn primary">Start</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subject Selection -->
+    <section id="subject-page" class="page">
+      <div class="container">
+        <div class="card">
+          <h2>Select Subject</h2>
+          <p class="muted">Choose a subject you're interested in 📘</p>
+          <div class="grid subjects">
+            <button class="subject-btn btn-card" data-subject="science">🔬 Science</button>
+            <button class="subject-btn btn-card" data-subject="math">➗ Mathematics</button>
+            <button class="subject-btn btn-card" data-subject="gk">🌍 General Knowledge</button>
+          </div>
+          <div class="actions">
+            <button id="sub-back" class="btn">Back</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Selection -->
+    <section id="category-page" class="page">
+      <div class="container">
+        <div class="card">
+          <h2 id="cat-heading">Choose Category</h2>
+          <p class="muted" id="cat-subtitle"></p>
+          <div id="categories" class="grid"></div>
+          <div class="actions">
+            <button id="cat-back" class="btn">Back</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Page -->
+    <section id="quiz-page" class="page">
+      <div class="container">
+        <div class="quiz-top">
+          <div>
+            <h3 id="quiz-user"></h3>
+            <p id="quiz-subcat" class="muted"></p>
+          </div>
+          <div class="progress-info">
+            <div id="question-count">Question 1 / 1</div>
+            <div id="score-display">Score: 0</div>
+          </div>
+        </div>
+
+        <div class="card question-card">
+          <div class="timer-row">
+            <div id="time-text">30s</div>
+            <div class="timebar-bg">
+              <div id="timebar" class="timebar"></div>
+            </div>
+          </div>
+
+          <div id="question-area">
+            <h2 id="question-text" class="question-text"></h2>
+            <div id="options" class="grid options-grid"></div>
+            <div class="hint-row">
+              <button id="hint-btn" class="btn secondary">💡 Show Hint</button>
+              <div id="hint-text" class="hint-text"></div>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="next-btn" class="btn primary" disabled>Next ➜</button>
+            <button id="quit-btn" class="btn">Quit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Page -->
+    <section id="result-page" class="page">
+      <div class="container">
+        <div class="card center-card">
+          <h2 id="result-msg">Well done 🎉</h2>
+          <p id="result-name" class="muted"></p>
+          <div class="result-stats">
+            <div><strong id="result-score">0</strong> / <span id="result-total">0</span></div>
+            <div>Percentage: <strong id="result-percent">0%</strong></div>
+          </div>
+          <div class="actions">
+            <button id="retry-btn" class="btn primary">Retry</button>
+            <button id="home-btn" class="btn">Home</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
